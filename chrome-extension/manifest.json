@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Send to Clapper",
+  "version": "1.0",
+  "description": "Opens YouTube videos in Clapper media player",
+  "permissions": [
+    "nativeMessaging",
+    "contextMenus",
+    "scripting",
+    "notifications",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "*://*.youtube.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Send to Clapper"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
+
