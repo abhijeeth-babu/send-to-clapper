@@ -1,0 +1,9 @@
+{
+  "name": "com.example.clapper",
+  "description": "Native messaging host for Send to Clapper extension",
+  "path": "/home/ab/learning/send-to-clapper/host/clapper_host.py",
+  "type": "stdio",
+  "allowed_extensions": [
+        "5b7c79c71ab013b3261b5567e002ffa5d543006b@temporary-addon"
+  ]
+}

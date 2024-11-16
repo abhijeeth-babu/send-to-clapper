@@ -1,0 +1,9 @@
+{
+  "name": "com.example.clapper",
+  "description": "Send YouTube links to Clapper",
+  "path": "/path/to/clapper_host.py",
+  "type": "stdio",
+  "allowed_origins": [
+    "chrome-extension://ID/"
+  ]
+}
