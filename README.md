@@ -93,7 +93,7 @@ Feel free to report issues or submit pull requests to improve the extension or i
 
 ## License  
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.  
+This project is licensed under the GPLv3. See the [LICENSE](LICENSE) file for details.  
 
 ---
 
