@@ -27,6 +27,12 @@ chrome.action.onClicked.addListener(async (tab) => {
 
   const videoLink = normalizeYouTubeLink(url);
 
+  if (!videoLink) {
+    showNotification("Invalid YouTube Link", "Could not process this link.");
+    return;
+  }
+
+
   chrome.scripting.executeScript({
     target: { tabId: tab.id },
     func: () => {
@@ -58,10 +64,10 @@ function openClapper(videoLink) {
     "com.example.clapper",
     { link: videoLink },
     (response) => {
-      if (chrome.runtime.lastError) {
+      if (chrome.runtime.lastError || !response) {
         showNotification(
           "Error sending to Clapper",
-          chrome.runtime.lastError.message
+          chrome.runtime.lastError?.message || "No response from Clapper."
         );
       }
     }
