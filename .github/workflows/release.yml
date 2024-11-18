@@ -1,0 +1,40 @@
+name: Build and Release Browser Extensions
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v3
+      with:
+        python-version: '3.x'
+
+    - name: Build Chrome Extension
+      run: |
+        mkdir chrome-extension-build
+        cp -r icons chrome-extension-build/
+        cp chrome-extension/* chrome-extension-build/
+        cd chrome-extension-build
+        zip -r ../send-to-clapper-chrome.zip .
+
+    - name: Build Firefox Extension
+      run: |
+        mkdir firefox-extension-build
+        cp -r icons firefox-extension-build/
+        cp firefox-extension/* firefox-extension-build/
+        cd firefox-extension-build
+        zip -r ../send-to-clapper-firefox.zip .
+
+    - name: Create Release
+      uses: softprops/action-gh-release@v1
+      with:
+        files: |
+          send-to-clapper-chrome.zip
+          send-to-clapper-firefox.zip

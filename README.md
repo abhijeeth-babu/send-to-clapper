@@ -20,10 +20,9 @@ Clapper is a modern and lightweight media player built on top of GStreamer. Itâ€
 
 #### Firefox  
 - Download "Send to Clapper" directly from the [AMO Store](https://addons.mozilla.org/en-US/firefox/addon/send-to-clapper/).  
-- Alternatively, download the `.xpi` file from the [GitHub releases](https://github.com/yourusername/send-to-clapper/releases) and load it into Firefox manually.  
 
 #### Chrome/Chromium  
-- Download the extension from the [GitHub releases](https://github.com/yourusername/send-to-clapper/releases).  
+- Download the extension from the [GitHub releases](https://github.com/abhijeeth-babu/send-to-clapper/releases).  
 - Extract the ZIP file and load the unpacked extension into Chrome/Chromium:  
   1. Go to `chrome://extensions/`.  
   2. Enable **Developer mode**.  
