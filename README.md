@@ -39,7 +39,7 @@ The host script (`clapper_host.py`) receives links from the extension and launch
 
 ### Using `installer.py`  
 
-The `installer.py` script sets up the native messaging host for your browser.  
+The `installer.py` script sets up the native messaging host for your browser. Clone this repo and run the `installer.py`.  
 
 #### General Usage  
 ```bash
@@ -72,6 +72,12 @@ python3 installer.py chromium
 This will:  
 1. Copy the manifest file to the appropriate location (`~/.config/google-chrome/NativeMessagingHosts/` or `~/.config/chromium/NativeMessagingHosts/`).  
 2. **IMPORTANT:** After installation, manually edit the manifest file at the displayed location to replace `ID` in the `allowed_origins` field with your Chrome extension ID (found in `chrome://extensions/`).  
+
+---  
+
+## Tip  
+
+Turn off video previews in the Playback and Performance section of YouTube settings.  
 
 ---
 
